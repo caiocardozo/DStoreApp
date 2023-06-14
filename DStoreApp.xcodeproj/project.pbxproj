@@ -9,20 +9,18 @@
 /* Begin PBXBuildFile section */
 		06893029F286E0FF28E5A805 /* Pods_DStoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9CDFF25BC459E55CFEA949 /* Pods_DStoreApp.framework */; };
 		4CADA18D2A38FC5400ADBD1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */; };
-		4CADA1912A38FC5400ADBD1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1902A38FC5400ADBD1A /* ViewController.swift */; };
-		4CADA1942A38FC5400ADBD1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CADA1922A38FC5400ADBD1A /* Main.storyboard */; };
 		4CADA1962A38FC5700ADBD1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CADA1952A38FC5700ADBD1A /* Assets.xcassets */; };
 		4CADA1992A38FC5700ADBD1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CADA1972A38FC5700ADBD1A /* LaunchScreen.storyboard */; };
 		4CADA1A42A38FC5700ADBD1A /* DStoreAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1A32A38FC5700ADBD1A /* DStoreAppTests.swift */; };
 		4CADA1AE2A38FC5700ADBD1A /* DStoreAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1AD2A38FC5700ADBD1A /* DStoreAppUITests.swift */; };
 		4CADA1B02A38FC5700ADBD1A /* DStoreAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1AF2A38FC5700ADBD1A /* DStoreAppUITestsLaunchTests.swift */; };
-		4CADA1D82A39468300ADBD1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1D72A39468300ADBD1A /* HomeViewController.swift */; };
-		4CADA1DA2A3948AE00ADBD1A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1D92A3948AE00ADBD1A /* HomeViewModel.swift */; };
-		4CADA1DC2A3948BA00ADBD1A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1DB2A3948BA00ADBD1A /* HomeView.swift */; };
 		4CADA1E12A394A4300ADBD1A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1E02A394A4300ADBD1A /* BaseViewModel.swift */; };
 		4CADA1E32A394A4C00ADBD1A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1E22A394A4C00ADBD1A /* BaseView.swift */; };
 		4CADA1E52A394ACD00ADBD1A /* HasCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1E42A394ACD00ADBD1A /* HasCustomView.swift */; };
 		4CADA1E72A394B0200ADBD1A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1E62A394B0200ADBD1A /* UIViewController+Extension.swift */; };
+		4CADA1F52A39505900ADBD1A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1F22A39505800ADBD1A /* HomeViewModel.swift */; };
+		4CADA1F62A39505900ADBD1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1F32A39505800ADBD1A /* HomeViewController.swift */; };
+		4CADA1F72A39505900ADBD1A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA1F42A39505900ADBD1A /* HomeView.swift */; };
 		89675B147D785324BA0391FF /* Pods_DStoreAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDB533A0A34BC1B080A4BBF /* Pods_DStoreAppTests.framework */; };
 		C664A940E1904C359D771A14 /* Pods_DStoreApp_DStoreAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2FAB65207435AD2EE05B3FE /* Pods_DStoreApp_DStoreAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -48,8 +46,6 @@
 		41F4429C4B794451D5D588FF /* Pods-DStoreAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStoreAppTests.release.xcconfig"; path = "Target Support Files/Pods-DStoreAppTests/Pods-DStoreAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CADA1892A38FC5400ADBD1A /* DStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4CADA1902A38FC5400ADBD1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4CADA1932A38FC5400ADBD1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CADA1952A38FC5700ADBD1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CADA1982A38FC5700ADBD1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CADA19A2A38FC5700ADBD1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,13 +54,13 @@
 		4CADA1A92A38FC5700ADBD1A /* DStoreAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStoreAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CADA1AD2A38FC5700ADBD1A /* DStoreAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DStoreAppUITests.swift; sourceTree = "<group>"; };
 		4CADA1AF2A38FC5700ADBD1A /* DStoreAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DStoreAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4CADA1D72A39468300ADBD1A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = DStoreApp/Resources/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
-		4CADA1D92A3948AE00ADBD1A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = DStoreApp/Resources/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
-		4CADA1DB2A3948BA00ADBD1A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = DStoreApp/Resources/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		4CADA1E02A394A4300ADBD1A /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		4CADA1E22A394A4C00ADBD1A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		4CADA1E42A394ACD00ADBD1A /* HasCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasCustomView.swift; sourceTree = "<group>"; };
 		4CADA1E62A394B0200ADBD1A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4CADA1F22A39505800ADBD1A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4CADA1F32A39505800ADBD1A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4CADA1F42A39505900ADBD1A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6CA4BCD17F89732AC03202FB /* Pods-DStoreApp-DStoreAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStoreApp-DStoreAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-DStoreApp-DStoreAppUITests/Pods-DStoreApp-DStoreAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B9CDFF25BC459E55CFEA949 /* Pods_DStoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C988E30CE07F2AA62D7CEB /* Pods-DStoreAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStoreAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DStoreAppTests/Pods-DStoreAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,13 +137,11 @@
 		4CADA18B2A38FC5400ADBD1A /* DStoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				4CADA1F82A39506A00ADBD1A /* Resources */,
+				4CADA1F12A39500F00ADBD1A /* App */,
+				4CADA1DD2A394A1E00ADBD1A /* Comuns */,
 				4CADA1D52A39463200ADBD1A /* Scenes */,
-				4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */,
-				4CADA1902A38FC5400ADBD1A /* ViewController.swift */,
-				4CADA1922A38FC5400ADBD1A /* Main.storyboard */,
-				4CADA1952A38FC5700ADBD1A /* Assets.xcassets */,
 				4CADA1972A38FC5700ADBD1A /* LaunchScreen.storyboard */,
-				4CADA19A2A38FC5700ADBD1A /* Info.plist */,
 			);
 			path = DStoreApp;
 			sourceTree = "<group>";
@@ -172,7 +166,6 @@
 		4CADA1D52A39463200ADBD1A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				4CADA1DD2A394A1E00ADBD1A /* Comuns */,
 				4CADA1D62A39467400ADBD1A /* Home */,
 			);
 			path = Scenes;
@@ -181,9 +174,9 @@
 		4CADA1D62A39467400ADBD1A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4CADA1D72A39468300ADBD1A /* HomeViewController.swift */,
-				4CADA1D92A3948AE00ADBD1A /* HomeViewModel.swift */,
-				4CADA1DB2A3948BA00ADBD1A /* HomeView.swift */,
+				4CADA1F42A39505900ADBD1A /* HomeView.swift */,
+				4CADA1F32A39505800ADBD1A /* HomeViewController.swift */,
+				4CADA1F22A39505800ADBD1A /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -214,6 +207,23 @@
 				4CADA1E42A394ACD00ADBD1A /* HasCustomView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4CADA1F12A39500F00ADBD1A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4CADA1F82A39506A00ADBD1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CADA19A2A38FC5700ADBD1A /* Info.plist */,
+				4CADA1952A38FC5700ADBD1A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		776C1126C337C945B2D05F2F /* Frameworks */ = {
@@ -337,7 +347,6 @@
 			files = (
 				4CADA1992A38FC5700ADBD1A /* LaunchScreen.storyboard in Resources */,
 				4CADA1962A38FC5700ADBD1A /* Assets.xcassets in Resources */,
-				4CADA1942A38FC5400ADBD1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,13 +475,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CADA1E72A394B0200ADBD1A /* UIViewController+Extension.swift in Sources */,
+				4CADA1F52A39505900ADBD1A /* HomeViewModel.swift in Sources */,
 				4CADA1E52A394ACD00ADBD1A /* HasCustomView.swift in Sources */,
-				4CADA1912A38FC5400ADBD1A /* ViewController.swift in Sources */,
 				4CADA18D2A38FC5400ADBD1A /* AppDelegate.swift in Sources */,
-				4CADA1D82A39468300ADBD1A /* HomeViewController.swift in Sources */,
-				4CADA1DC2A3948BA00ADBD1A /* HomeView.swift in Sources */,
 				4CADA1E32A394A4C00ADBD1A /* BaseView.swift in Sources */,
-				4CADA1DA2A3948AE00ADBD1A /* HomeViewModel.swift in Sources */,
+				4CADA1F72A39505900ADBD1A /* HomeView.swift in Sources */,
+				4CADA1F62A39505900ADBD1A /* HomeViewController.swift in Sources */,
 				4CADA1E12A394A4300ADBD1A /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,14 +518,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4CADA1922A38FC5400ADBD1A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CADA1932A38FC5400ADBD1A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4CADA1972A38FC5700ADBD1A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -653,12 +653,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 942K95C3D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DStoreApp/Info.plist;
+				INFOPLIST_FILE = DStoreApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -666,9 +665,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caio.DStoreApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -682,12 +684,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 942K95C3D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DStoreApp/Info.plist;
+				INFOPLIST_FILE = DStoreApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,9 +696,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.caio.DStoreApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
