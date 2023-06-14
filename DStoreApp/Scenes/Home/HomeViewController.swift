@@ -23,6 +23,7 @@ final class HomeViewController: UIViewController, HasCustomView {
         setupDelegate()
         setupObservables()
         viewModel.loadData()
+        title = "Teste"
     }
     
     private func setupObservables() {

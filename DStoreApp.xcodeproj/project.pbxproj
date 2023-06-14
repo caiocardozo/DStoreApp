@@ -141,7 +141,6 @@
 				4CADA1F12A39500F00ADBD1A /* App */,
 				4CADA1DD2A394A1E00ADBD1A /* Comuns */,
 				4CADA1D52A39463200ADBD1A /* Scenes */,
-				4CADA1972A38FC5700ADBD1A /* LaunchScreen.storyboard */,
 			);
 			path = DStoreApp;
 			sourceTree = "<group>";
@@ -212,6 +211,7 @@
 		4CADA1F12A39500F00ADBD1A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4CADA1972A38FC5700ADBD1A /* LaunchScreen.storyboard */,
 				4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */,
 			);
 			path = App;
