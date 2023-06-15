@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Products: Codable {
+struct Product: Codable {
     var name: String?
     var imageURL: String?
     var info: String?

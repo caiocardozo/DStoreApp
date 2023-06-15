@@ -9,6 +9,6 @@ import Foundation
 
 struct Store: Codable {
     var spotlight: [Spotlight]?
-    var products: [Products]?
+    var products: [Product]?
     var cash: Cash?
 }
