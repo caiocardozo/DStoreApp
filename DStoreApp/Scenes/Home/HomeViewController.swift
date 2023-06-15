@@ -23,7 +23,6 @@ final class HomeViewController: UIViewController, HasCustomView {
         setupDelegate()
         setupObservables()
         viewModel.loadData()
-        title = "Teste"
     }
     
     private func setupObservables() {
@@ -32,6 +31,7 @@ final class HomeViewController: UIViewController, HasCustomView {
         }
         viewModel.error = { [weak self] error in
            // TODO: Messagem de erro
+            debugPrint(error)
         }
     }
     

@@ -9,9 +9,20 @@ import Foundation
 
 final class HomeViewModel: BaseViewModel {
     
+    // MARK: - Variables
+    var stores: Store?
+    
+    // MARK: - Request
     func loadData() {
-        // TODO: Call request
-        
+        isLoading?(true)
+        StoreRepository.fetchStors { response in
+            self.isLoading?(false)
+            self.stores = response
+            debugPrint(response)
+        } error: { error in
+            self.isLoading?(false)
+            self.error?(error)
+        }
     }
 }
 

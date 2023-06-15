@@ -7,8 +7,7 @@ target 'DStoreApp' do
 
   # Pods for DStoreApp
     pod 'SnapKit', '~> 5.6.0'
-    pod 'Alamofire', '~> 5.0.0-rc.3'
-    pod 'Bagel', '~>  1.4.0'
+    pod 'Alamofire'
 
   target 'DStoreAppTests' do
     inherit! :search_paths
