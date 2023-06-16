@@ -68,5 +68,10 @@ extension UIViewController {
     func push(_ viewController: UIViewController) {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func setupBack() {
+        let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = backItem
+    }
 }
 

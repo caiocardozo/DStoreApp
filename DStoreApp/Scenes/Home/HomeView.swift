@@ -53,7 +53,6 @@ final class HomeView: BaseView {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(SpotlightCollectionViewCell.self, forCellWithReuseIdentifier: SpotlightCollectionViewCell.reuseIdentifier)
         collection.showsHorizontalScrollIndicator = false
-       
         return collection
     }()
     

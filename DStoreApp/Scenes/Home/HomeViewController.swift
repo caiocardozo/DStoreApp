@@ -115,11 +115,3 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         }
     }
 }
-
-extension UIViewController {
-   
-    func setupBack() {
-        let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem = backItem
-    }
-}
