@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ProductsCollectionViewCell: UICollectionViewCell {
+class ProductCollectionViewCell: UICollectionViewCell {
     
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
@@ -44,7 +44,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension ProductsCollectionViewCell {
+extension ProductCollectionViewCell {
     func setup(product: Product) {
         if let img = product.imageURL {
             bannerImageView.loadFrom(URLAddress: img)

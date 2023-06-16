@@ -11,14 +11,15 @@ final class HomeViewModel: BaseViewModel {
     
     // MARK: - Variables
     var stores: Store?
-    var reloadSpotlightCollection: (() -> Void)?
+    var reloadCollections: (() -> Void)?
+    
     // MARK: - Request
     func loadData() {
         isLoading?(true)
         StoreRepository.fetchStors { response in
             self.isLoading?(false)
             self.stores = response
-            self.reloadSpotlightCollection?()
+            self.reloadCollections?()
             debugPrint(response)
         } error: { error in
             self.isLoading?(false)

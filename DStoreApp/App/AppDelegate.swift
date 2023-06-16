@@ -17,9 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         setupNavbar()
         let rootVC = HomeViewController()
-        rootVC.modalPresentationStyle = .overFullScreen
-        rootVC.navigationController?.navigationBar.shadowImage = UIImage()
-        window?.rootViewController = rootVC
+        let nav = UINavigationController(rootViewController: rootVC)
+        nav.modalPresentationStyle = .overFullScreen
+        nav.navigationBar.shadowImage = UIImage()
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         return true
     }

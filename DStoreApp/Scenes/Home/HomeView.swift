@@ -36,7 +36,17 @@ final class HomeView: BaseView {
         label.font = UIFont.boldSystemFont(ofSize: 16.0)
         return label
     }()
-    
+    let mainStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 44
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .fill
+        return stackView
+    }()
+    let cashComponent: CashTitleBanner = {
+        return CashTitleBanner()
+    }()
     lazy var spotlightCollectionView: UICollectionView = {
         let layout =  UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -47,12 +57,25 @@ final class HomeView: BaseView {
         return collection
     }()
     
+    lazy var productsCollectionView: UICollectionView = {
+        let layout =  UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: ProductCollectionViewCell.reuseIdentifier)
+        collection.showsHorizontalScrollIndicator = false
+       
+        return collection
+    }()
+    
     override func addViews() {
         self.backgroundColor = .white
         self.addSubview(scrollView)
         contentView.addSubview(iconImageView)
         contentView.addSubview(titleLabel)
-        contentView.addSubview(spotlightCollectionView)
+        mainStackView.addArrangedSubview(spotlightCollectionView)
+        mainStackView.addArrangedSubview(cashComponent)
+        mainStackView.addArrangedSubview(productsCollectionView)
+        contentView.addSubview(mainStackView)
         scrollView.addSubview(contentView)
     }
     
@@ -74,11 +97,25 @@ final class HomeView: BaseView {
             make.leading.equalTo(iconImageView.snp.trailing).offset(16)
             make.top.equalToSuperview()
         }
-        spotlightCollectionView.snp.makeConstraints { make in
+        mainStackView.snp.makeConstraints { make in
             make.top.equalTo(iconImageView.snp.bottom).inset(-36)
             make.leading.trailing.equalToSuperview()
+            make.bottom.greaterThanOrEqualToSuperview()
+        }
+        productsCollectionView.snp.makeConstraints { make in
+//            make.top.equalTo(spotlightCollectionView.snp.bottom).inset(-56)
+//            make.leading.trailing.equalToSuperview()
             make.height.equalTo(200)
         }
+        spotlightCollectionView.snp.makeConstraints { make in
+//            make.top.equalTo(spotlightCollectionView.snp.bottom).inset(-56)
+//            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(100)
+        }
+    }
+    
+    func setupCash(cash: Cash) {
+        cashComponent.setup(cash: cash)
     }
 }
 

@@ -8,7 +8,6 @@
 import Foundation
 
 struct Spotlight: Codable {
-    
     let name: String?
     let bannerURL: String?
     let info: String?
