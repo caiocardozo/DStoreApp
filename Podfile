@@ -6,7 +6,7 @@ target 'DStoreApp' do
   use_frameworks!
 
   # Pods for DStoreApp
-    pod 'SnapKit', '~> 5.6.0'
+    pod 'SnapKit'
     pod 'Alamofire'
 
   target 'DStoreAppTests' do

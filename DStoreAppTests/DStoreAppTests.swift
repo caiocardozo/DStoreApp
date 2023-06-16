@@ -32,5 +32,18 @@ final class DStoreAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    
+    func testDetailItemViewController(){
+        let viewController = DetailItemViewController(name: "name", imageBanner: "imgUrl", info: "information")
+        XCTAssertEqual(viewController.name, "name")
+        XCTAssertEqual(viewController.imageBanner, "imgUrl")
+        XCTAssertEqual(viewController.info, "information")
+    }
 
+    func testHomeViewControllerNib(){
+        let vc = HomeViewController()
+        UIApplication.shared.keyWindow?.rootViewController = vc
+        XCTAssertEqual(vc.customView.titleLabel.text, "Olá Maria")
+    }
 }
