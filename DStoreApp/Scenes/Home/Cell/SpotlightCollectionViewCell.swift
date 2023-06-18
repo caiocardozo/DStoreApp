@@ -12,9 +12,8 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.layer.cornerRadius = 8
-        image.layer.shadowRadius = 8.0
+        image.contentMode = .scaleAspectFit
+        
         return image
     }()
     
@@ -32,15 +31,18 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     //MARK: - Setup
     func addViews() {
         contentView.addSubview(bannerImageView)
+        contentView.layer.cornerRadius = 16
+        contentView.layer.shadowRadius = 8.0
+        contentView.clipsToBounds = true
     }
     func addConstraints() {
         bannerImageView.snp.makeConstraints { make in
             make.top.bottom.trailing.equalToSuperview()
-            make.leading.equalToSuperview().offset(-8)
+            make.leading.trailing.equalToSuperview().offset(8)
         }
     }
     func setupExtraConfigurations() {
-        clipsToBounds = true
+        
         backgroundColor = .clear
     }
 }
@@ -48,7 +50,7 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
 extension SpotlightCollectionViewCell {
     func setup(spotlight: Spotlight) {
         if let img = spotlight.bannerURL {
-            bannerImageView.loadFrom(URLAddress: img)
+            bannerImageView.setImage(imageURL: img)
         }
     }
 }

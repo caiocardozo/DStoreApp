@@ -48,6 +48,7 @@ final class HomeViewController: UIViewController, HasCustomView {
         }
         self.customView.spotlightCollectionView.reloadData()
         self.customView.productsCollectionView.reloadData()
+       
     }
     
     private func setupDelegate() {
@@ -99,16 +100,16 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         if collectionView == customView.spotlightCollectionView {
             if let spotlight = viewModel.stores?.spotlight {
                 if spotlight.count > 1 {
-                    return CGSize(width: UIScreen.main.bounds.width - CGFloat(48), height: 230)
+                    return CGSize(width: UIScreen.main.bounds.width - CGFloat(24), height: 170)
                 } else {
                     return CGSize(width: UIScreen.main.bounds.width - 16, height: 230)
                 }
             } else {
-                return CGSize(width: UIScreen.main.bounds.width - 16, height: 230)
+                return CGSize(width: UIScreen.main.bounds.width - 16, height: 320)
             }
         } else {
             if let spotlight = viewModel.stores?.products {
-                    return CGSize(width: 80, height: 80)
+                    return CGSize(width: 150, height: 130)
             } else {
                 return CGSize(width: UIScreen.main.bounds.width - 16, height: 230)
             }

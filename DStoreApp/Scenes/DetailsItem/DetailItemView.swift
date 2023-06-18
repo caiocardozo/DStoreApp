@@ -24,21 +24,17 @@ final class DetailItemView: BaseView {
     }()
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Olá Maria"
+        label.textAlignment = .center
         label.textColor = .darkGray
-        label.font = UIFont.boldSystemFont(ofSize: 16.0)
+        label.font = UIFont.boldSystemFont(ofSize: 18.0)
         return label
     }()
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.layer.cornerRadius = 8
-        image.layer.shadowRadius = 8.0
         return image
     }()
     lazy var infoLabel: UILabel = {
         let label = UILabel()
-        label.text = "Olá Maria"
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 16.0)
         return label
@@ -63,7 +59,8 @@ final class DetailItemView: BaseView {
             make.height.equalToSuperview().priority(.low)
         }
         titleLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.top.equalToSuperview().inset(44)
+            make.leading.trailing.equalToSuperview().inset(16)
         }
     }
     

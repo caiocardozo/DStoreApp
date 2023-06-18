@@ -10,11 +10,20 @@ import SnapKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
     
+    lazy var cardView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 12
+        view.layer.shadowColor = UIColor.darkGray.cgColor
+        view.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        view.layer.shadowRadius = 4
+        view.layer.shadowOpacity = 0.3
+        return view
+    }()
+    
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.layer.cornerRadius = 8
-        image.layer.shadowRadius = 8.0
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -31,11 +40,17 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Setup
     func addViews() {
-        contentView.addSubview(bannerImageView)
+        cardView.addSubview(bannerImageView)
+        contentView.addSubview(cardView)
     }
     func addConstraints() {
+        cardView.snp.makeConstraints { make in
+            make.top.bottom.trailing.equalToSuperview().inset(4)
+            make.leading.equalToSuperview().inset(24)
+        }
         bannerImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.center.equalToSuperview()
+            make.size.equalTo(60)
         }
     }
     func setupExtraConfigurations() {
@@ -47,7 +62,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
 extension ProductCollectionViewCell {
     func setup(product: Product) {
         if let img = product.imageURL {
-            bannerImageView.loadFrom(URLAddress: img)
+            bannerImageView.setImage(imageURL: img)
         }
     }
 }

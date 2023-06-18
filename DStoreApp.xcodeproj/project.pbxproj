@@ -11,6 +11,12 @@
 		4C2F04442A3BFE3B0006410E /* CashTitleBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04432A3BFE3B0006410E /* CashTitleBanner.swift */; };
 		4C2F04472A3C09FE0006410E /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04462A3C09FE0006410E /* DetailItemView.swift */; };
 		4C2F04492A3C0A060006410E /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04482A3C0A060006410E /* DetailItemViewController.swift */; };
+		4C2F04502A3F8B2F0006410E /* AppCosntants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F044F2A3F8B2F0006410E /* AppCosntants.swift */; };
+		4C2F04522A3F99270006410E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04512A3F99270006410E /* String+Extension.swift */; };
+		4C2F04542A3F99550006410E /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04532A3F99550006410E /* Dictionary+Extensions.swift */; };
+		4C2F04562A3F9A870006410E /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04552A3F9A870006410E /* NSAttributedString+Extension.swift */; };
+		4C2F04582A3F9C980006410E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2F04572A3F9C980006410E /* Colors.xcassets */; };
+		4C2F045A2A3F9CE20006410E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04592A3F9CE20006410E /* UIColor+Extension.swift */; };
 		4CADA18D2A38FC5400ADBD1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */; };
 		4CADA1962A38FC5700ADBD1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CADA1952A38FC5700ADBD1A /* Assets.xcassets */; };
 		4CADA1992A38FC5700ADBD1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CADA1972A38FC5700ADBD1A /* LaunchScreen.storyboard */; };
@@ -62,6 +68,12 @@
 		4C2F04432A3BFE3B0006410E /* CashTitleBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTitleBanner.swift; sourceTree = "<group>"; };
 		4C2F04462A3C09FE0006410E /* DetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemView.swift; sourceTree = "<group>"; };
 		4C2F04482A3C0A060006410E /* DetailItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
+		4C2F044F2A3F8B2F0006410E /* AppCosntants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCosntants.swift; sourceTree = "<group>"; };
+		4C2F04512A3F99270006410E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		4C2F04532A3F99550006410E /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		4C2F04552A3F9A870006410E /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		4C2F04572A3F9C980006410E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		4C2F04592A3F9CE20006410E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4CADA1892A38FC5400ADBD1A /* DStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CADA1952A38FC5700ADBD1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +171,14 @@
 			path = DetailsItem;
 			sourceTree = "<group>";
 		};
+		4C2F044E2A3F8B250006410E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4C2F044F2A3F8B2F0006410E /* AppCosntants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		4CADA1802A38FC5400ADBD1A = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +254,7 @@
 		4CADA1DD2A394A1E00ADBD1A /* Comuns */ = {
 			isa = PBXGroup;
 			children = (
+				4C2F044E2A3F8B250006410E /* Constants */,
 				4C2F04422A3BFE220006410E /* Components */,
 				4CADA1DF2A394A3400ADBD1A /* Base */,
 				4CADA1DE2A394A2400ADBD1A /* Extensions */,
@@ -248,6 +269,10 @@
 				4CADA1E62A394B0200ADBD1A /* UIViewController+Extension.swift */,
 				4CF1B12F2A3AB04000456889 /* UICollectionViewCell+Extension.swift */,
 				4CF1B1312A3B461B00456889 /* UIImageView+Extension.swift */,
+				4C2F04512A3F99270006410E /* String+Extension.swift */,
+				4C2F04532A3F99550006410E /* Dictionary+Extensions.swift */,
+				4C2F04552A3F9A870006410E /* NSAttributedString+Extension.swift */,
+				4C2F04592A3F9CE20006410E /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +301,7 @@
 			children = (
 				4CADA19A2A38FC5700ADBD1A /* Info.plist */,
 				4CADA1952A38FC5700ADBD1A /* Assets.xcassets */,
+				4C2F04572A3F9C980006410E /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -462,6 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2F04582A3F9C980006410E /* Colors.xcassets in Resources */,
 				4CADA1992A38FC5700ADBD1A /* LaunchScreen.storyboard in Resources */,
 				4CADA1962A38FC5700ADBD1A /* Assets.xcassets in Resources */,
 			);
@@ -598,7 +625,9 @@
 				4CF1B1292A3AA21900456889 /* ApiConstants.swift in Sources */,
 				4CF1B1142A3A415600456889 /* Store.swift in Sources */,
 				4C2F04472A3C09FE0006410E /* DetailItemView.swift in Sources */,
+				4C2F045A2A3F9CE20006410E /* UIColor+Extension.swift in Sources */,
 				4CF1B11A2A3A46F600456889 /* Cash.swift in Sources */,
+				4C2F04522A3F99270006410E /* String+Extension.swift in Sources */,
 				4CADA18D2A38FC5400ADBD1A /* AppDelegate.swift in Sources */,
 				4CADA1E32A394A4C00ADBD1A /* BaseView.swift in Sources */,
 				4CADA1F72A39505900ADBD1A /* HomeView.swift in Sources */,
@@ -608,10 +637,13 @@
 				4CF1B12E2A3AAE8D00456889 /* ProductCollectionViewCell.swift in Sources */,
 				4CADA1F62A39505900ADBD1A /* HomeViewController.swift in Sources */,
 				4CF1B1232A3A524800456889 /* NetworkManager.swift in Sources */,
+				4C2F04562A3F9A870006410E /* NSAttributedString+Extension.swift in Sources */,
 				4C2F04492A3C0A060006410E /* DetailItemViewController.swift in Sources */,
 				4CF1B1182A3A46EA00456889 /* Spotlight.swift in Sources */,
+				4C2F04502A3F8B2F0006410E /* AppCosntants.swift in Sources */,
 				4CF1B1302A3AB04000456889 /* UICollectionViewCell+Extension.swift in Sources */,
 				4CADA1E12A394A4300ADBD1A /* BaseViewModel.swift in Sources */,
+				4C2F04542A3F99550006410E /* Dictionary+Extensions.swift in Sources */,
 				4CF1B1212A3A521400456889 /* StoreRepository.swift in Sources */,
 				4C2F04442A3BFE3B0006410E /* CashTitleBanner.swift in Sources */,
 			);
