@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol HomeViewDelegate: AnyObject {
+    func didTapCashBanner(cash: Cash)
+}
 final class HomeView: BaseView {
+    
+    weak var delegate: HomeViewDelegate?
+    
     let scrollView: UIScrollView = {
         let scroll = UIScrollView()
         scroll.isScrollEnabled = true
@@ -17,9 +23,7 @@ final class HomeView: BaseView {
         return scroll
     }()
     let contentView: UIView = {
-        let view = UIView()
-        view.isUserInteractionEnabled = true
-        return view
+        return UIView()
     }()
     lazy var iconImageView: UIImageView = {
         let image = UIImageView()
@@ -42,7 +46,7 @@ final class HomeView: BaseView {
         return stackView
     }()
     lazy var cashComponent: CashTitleBanner = {
-        var cash = CashTitleBanner()
+        var cash = CashTitleBanner(delegate: self)
         return cash
     }()
     lazy var spotlightCollectionView: UICollectionView = {
@@ -69,6 +73,12 @@ final class HomeView: BaseView {
         collection.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: ProductCollectionViewCell.reuseIdentifier)
         return collection
     }()
+    
+    // MARK: - Inits
+    convenience init(delegate: HomeViewDelegate) {
+        self.init()
+        self.delegate = delegate
+    }
     
     override func addViews() {
         self.backgroundColor = .white
@@ -125,6 +135,13 @@ final class HomeView: BaseView {
     
     func setupCash(cash: Cash) {
         cashComponent.setup(cash: cash)
+    }
+}
+
+// MARK: - CashTitleBannerDelegate
+extension HomeView: CashTitleBannerDelegate {
+    func didTapBanner(cash: Cash) {
+        delegate?.didTapCashBanner(cash: cash)
     }
 }
 

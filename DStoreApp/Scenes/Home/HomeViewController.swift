@@ -14,7 +14,7 @@ final class HomeViewController: UIViewController, HasCustomView {
     
     // MARK: - Lifecycle
     override func loadView() {
-        let customView = CustomView()
+        let customView = CustomView(delegate: self)
         view = customView
     }
     // MARK: - LifeCycle
@@ -84,13 +84,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == customView.spotlightCollectionView {
-            self.push(DetailItemViewController(name: viewModel.stores?.spotlight?[indexPath.row].name ?? "",
-                                               imageBanner: viewModel.stores?.spotlight?[indexPath.row].bannerURL ?? "",
-                                               info: viewModel.stores?.spotlight?[indexPath.row].info ?? ""))
+            DetailItemViewController.show(in: self, name: viewModel.stores?.spotlight?[indexPath.row].name ?? "", info: viewModel.stores?.spotlight?[indexPath.row].info ?? "")
         } else {
-            self.push(DetailItemViewController(name: viewModel.stores?.products?[indexPath.row].name ?? "",
-                                               imageBanner: viewModel.stores?.products?[indexPath.row].imageURL ?? "",
-                                               info: viewModel.stores?.products?[indexPath.row].info ?? ""))
+            DetailItemViewController.show(in: self, name: viewModel.stores?.products?[indexPath.row].name ?? "", info: viewModel.stores?.products?[indexPath.row].info ?? "")
         }
     }
 }
@@ -114,5 +110,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
                 return CGSize(width: UIScreen.main.bounds.width - 16, height: 230)
             }
         }
+    }
+}
+// MARK: - HomeViewDelegate
+extension HomeViewController: HomeViewDelegate {
+    func didTapCashBanner(cash: Cash) {
+        DetailItemViewController.show(in: self, name: cash.title ?? "", info: cash.info ?? "")
     }
 }

@@ -8,7 +8,14 @@
 import UIKit
 import SnapKit
 
-final class CashTitleBanner: BaseView {
+protocol CashTitleBannerDelegate: AnyObject {
+    func didTapBanner(cash: Cash)
+}
+
+class CashTitleBanner: BaseView {
+    // MARK: - Variables
+    weak var delegate: CashTitleBannerDelegate?
+    var cash: Cash?
     
     lazy var titleLabel: UILabel = {
         return UILabel()
@@ -16,6 +23,7 @@ final class CashTitleBanner: BaseView {
     
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
+        image.isUserInteractionEnabled = true
         image.contentMode = .scaleAspectFit
         image.layer.cornerRadius = 16
         image.layer.shadowRadius = 8.0
@@ -23,11 +31,16 @@ final class CashTitleBanner: BaseView {
         return image
     }()
     
+    // MARK: - Inits
+    convenience init(delegate: CashTitleBannerDelegate) {
+        self.init()
+        self.delegate = delegate
+    }
+    
     override func addViews() {
         self.addSubview(titleLabel)
         self.addSubview(bannerImageView)
     }
-    
     override func addConstraints() {
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -41,11 +54,21 @@ final class CashTitleBanner: BaseView {
             make.height.equalTo(62)
         }
     }
-    
+    override func setupExtraConfigurations() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.didTapBanner))
+        self.bannerImageView.addGestureRecognizer(gesture)
+    }
+    // MARK: - Setup
     func setup(cash: Cash) {
         titleLabel.attributedText = .combine("digio ".primaryTitleBlue, "Cash".primaryTitleGray)
+        self.cash = cash
         if let img = cash.bannerURL{
             bannerImageView.setImage(imageURL: img)
         }
+    }
+    // MARK: - Actions
+    @objc func didTapBanner(sender: UITapGestureRecognizer) {
+        guard let cash = self.cash else { return }
+        delegate?.didTapBanner(cash: cash)
     }
 }

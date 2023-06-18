@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol DetailItemViewDelegate: AnyObject {
+    func didTapUrl(url: URL)
+}
+
 final class DetailItemView: BaseView {
+    
+    weak var delegate: DetailItemViewDelegate?
     
     lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
@@ -22,33 +28,32 @@ final class DetailItemView: BaseView {
         view.isUserInteractionEnabled = true
         return view
     }()
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.textColor = .darkGray
-        label.font = UIFont.boldSystemFont(ofSize: 18.0)
-        return label
-    }()
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
         return image
     }()
-    lazy var infoLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .darkGray
-        label.font = UIFont.boldSystemFont(ofSize: 16.0)
-        return label
+    lazy var infoLabel: UITextView = {
+        let text = UITextView()
+        text.font = UIFont.systemFont(ofSize: 16.0)
+        text.isEditable = false
+        text.dataDetectorTypes = [.link]
+        text.isUserInteractionEnabled = true
+        text.delegate = self
+       return text
     }()
     
+    // MARK: - Inits
+    convenience init(delegate: DetailItemViewDelegate) {
+        self.init()
+        self.delegate = delegate
+    }
+    // MARK: - Setups
     override func addViews() {
         self.backgroundColor = .white
         self.addSubview(scrollView)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(bannerImageView)
         contentView.addSubview(infoLabel)
         scrollView.addSubview(contentView)
     }
-    
     override func addConstraints() {
         scrollView.snp.makeConstraints { make in
             make.top.trailing.leading.bottom.equalTo(safeAreaLayoutGuide)
@@ -58,14 +63,20 @@ final class DetailItemView: BaseView {
             make.width.equalTo(self.scrollView)
             make.height.equalToSuperview().priority(.low)
         }
-        titleLabel.snp.makeConstraints { make in
+        infoLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(44)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.leading.trailing.bottom.equalToSuperview().inset(16)
         }
     }
-    
-    func setup(name: String, imageBanner: String, info: String) {
-        self.infoLabel.text = name
+    func setup(info: String) {
+        self.infoLabel.text = info
     }
-
 }
+
+extension DetailItemView: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+            delegate?.didTapUrl(url: URL)
+        return false
+    }
+}
+

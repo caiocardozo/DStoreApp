@@ -12,14 +12,12 @@ final class DetailItemViewController: UIViewController, HasCustomView {
     typealias CustomView = DetailItemView
     
     var name: String?
-    var imageBanner: String?
     var info: String?
     
     // MARK: - Init
-    init(name: String, imageBanner: String, info: String) {
+    init(name: String, info: String) {
         super.init(nibName: nil, bundle: nil)
         self.name = name
-        self.imageBanner = imageBanner
         self.info = info
     }
     
@@ -39,9 +37,39 @@ final class DetailItemViewController: UIViewController, HasCustomView {
     }
     
     private func setup() {
-        title = "Detail"
+        setupCloseButton()
+        title = self.name
     }
     private func setupData() {
-        customView.setup(name: name ?? "", imageBanner: imageBanner ?? "", info: info ?? "")
+        customView.setup(info: info ?? "")
+    }
+}
+
+// MARK: - Extension Show
+extension DetailItemViewController {
+    static func show(in host: UIViewController, name: String, info: String) {
+        let alert = DetailItemViewController(name: name, info: info)
+        let nav = UINavigationController(rootViewController: alert)
+        nav.modalPresentationStyle = .pageSheet
+        host.present(nav, animated: true, completion: nil)
+    }
+}
+
+extension DetailItemViewController: DetailItemViewDelegate {
+    func didTapUrl(url: URL) {
+        UIApplication.shared.open(url)
+    }
+}
+
+extension UIViewController {
+    func setupCloseButton() {
+        let closeButton = UIButton(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
+        closeButton.setImage(UIImage(named: "icClose"), for: .normal)
+        closeButton.addTarget(self, action: #selector(tapCloseButton), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: closeButton)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+    }
+    @objc func tapCloseButton() {
+        self.navigationController?.dismiss(animated: true)
     }
 }
