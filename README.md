@@ -38,7 +38,7 @@ Foi inserido o localizable de strings no app, não para ter uma lingua no app qu
 - Na raiz executar comando pod install para instalar os pods necessários.
 - Abrir o projeto executando xed .
 
-### TODO
+## TODO
 - Implmentar o uso do SwiftLint no projeto, afim de padronizar e melhorar a escrita de código. 
 - Trocar a camada de network para usar swift nativo e assim remover o pod Alamofire
 - Efetuar o carregamento das imagens de forma nativa e assim remover o pod SDWebImage
