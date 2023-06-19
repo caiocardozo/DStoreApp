@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  DStoreApp
+
+  Created by Caio Cardozo on 19/06/23.
+  
+*/
+
+"Hello Maria" = "Olá Maria";
+"Attention" = "Atenção";
+"Products" = "Produtos";

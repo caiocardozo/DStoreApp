@@ -78,10 +78,23 @@ extension UIViewController {
 // MARK: - Alerts
 extension UIViewController {
     func showErrorAlert(message: String) {
-        self.showAlert(title: "Atenção", message: message)
+        self.showAlert(title: "Attention".localized, message: message)
     }
     
     func showAlert(title: String, message: String, okBlock:(() -> Void)?=nil, cancelBlock: (() -> Void)?=nil) {
         AlertViewController.show(in: self, title: title, message: message, callback: okBlock)
+    }
+}
+// MARK: - Setup Buttons NavBar
+extension UIViewController {
+    func setupCloseButton() {
+        let closeButton = UIButton(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
+        closeButton.setImage(UIImage(named: "icClose"), for: .normal)
+        closeButton.addTarget(self, action: #selector(tapCloseButton), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: closeButton)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+    }
+    @objc func tapCloseButton() {
+        self.navigationController?.dismiss(animated: true)
     }
 }

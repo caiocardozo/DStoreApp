@@ -20,7 +20,6 @@ final class DetailItemView: BaseView {
         let scroll = UIScrollView()
         scroll.isScrollEnabled = true
         scroll.autoresizingMask = UIView.AutoresizingMask.flexibleHeight
-        
         return scroll
     }()
     lazy var contentView: UIView = {

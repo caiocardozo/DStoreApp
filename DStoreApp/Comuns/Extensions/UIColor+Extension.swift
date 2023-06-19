@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 extension UIColor {
     enum Colors: String {
         case primaryColorBlue

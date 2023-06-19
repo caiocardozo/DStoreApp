@@ -20,13 +20,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
         view.layer.shadowOpacity = 0.3
         return view
     }()
-    
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         return image
     }()
-    
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,7 +35,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     //MARK: - Setup
     func addViews() {
         cardView.addSubview(bannerImageView)
@@ -57,9 +54,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
         clipsToBounds = true
         backgroundColor = .clear
     }
-}
-
-extension ProductCollectionViewCell {
     func setup(product: Product) {
         if let img = product.imageURL {
             bannerImageView.setImage(imageURL: img)

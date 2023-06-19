@@ -16,8 +16,7 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
         
         return image
     }()
-    
-    //MARK: - Init
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         addViews()
@@ -27,8 +26,7 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    //MARK: - Setup
+    // MARK: - Setup
     func addViews() {
         contentView.addSubview(bannerImageView)
         contentView.layer.cornerRadius = 16
@@ -42,12 +40,8 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
         }
     }
     func setupExtraConfigurations() {
-        
         backgroundColor = .clear
     }
-}
-
-extension SpotlightCollectionViewCell {
     func setup(spotlight: Spotlight) {
         if let img = spotlight.bannerURL {
             bannerImageView.setImage(imageURL: img)

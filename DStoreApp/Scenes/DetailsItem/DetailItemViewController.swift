@@ -20,7 +20,6 @@ final class DetailItemViewController: UIViewController, HasCustomView {
         self.name = name
         self.info = info
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -35,7 +34,6 @@ final class DetailItemViewController: UIViewController, HasCustomView {
         setup()
         setupData()
     }
-    
     private func setup() {
         setupCloseButton()
         title = self.name
@@ -44,7 +42,6 @@ final class DetailItemViewController: UIViewController, HasCustomView {
         customView.setup(info: info ?? "")
     }
 }
-
 // MARK: - Extension Show
 extension DetailItemViewController {
     static func show(in host: UIViewController, name: String, info: String) {
@@ -54,22 +51,9 @@ extension DetailItemViewController {
         host.present(nav, animated: true, completion: nil)
     }
 }
-
+// MARK: - DetailItemViewDelegate
 extension DetailItemViewController: DetailItemViewDelegate {
     func didTapUrl(url: URL) {
         UIApplication.shared.open(url)
-    }
-}
-
-extension UIViewController {
-    func setupCloseButton() {
-        let closeButton = UIButton(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
-        closeButton.setImage(UIImage(named: "icClose"), for: .normal)
-        closeButton.addTarget(self, action: #selector(tapCloseButton), for: .touchUpInside)
-        let barButtonItem = UIBarButtonItem(customView: closeButton)
-        self.navigationItem.rightBarButtonItem = barButtonItem
-    }
-    @objc func tapCloseButton() {
-        self.navigationController?.dismiss(animated: true)
     }
 }

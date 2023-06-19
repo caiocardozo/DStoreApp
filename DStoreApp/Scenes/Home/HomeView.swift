@@ -33,7 +33,7 @@ final class HomeView: BaseView {
     }()
     lazy var nameUserLabel: UILabel = {
         let label = UILabel()
-        label.text = "Olá Maria"
+        label.text = "Hello Maria".localized
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 16.0)
         return label
@@ -59,7 +59,7 @@ final class HomeView: BaseView {
     }()
     lazy var titleProductLabel: UILabel = {
         let label = UILabel()
-        label.text = "Produtos"
+        label.text = "Products".localized
         label.textColor = UIColor.appColor(.primaryColorBlue)
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
         return label
@@ -73,13 +73,11 @@ final class HomeView: BaseView {
         collection.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: ProductCollectionViewCell.reuseIdentifier)
         return collection
     }()
-    
     // MARK: - Inits
     convenience init(delegate: HomeViewDelegate) {
         self.init()
         self.delegate = delegate
     }
-    
     override func addViews() {
         self.backgroundColor = .white
         self.addSubview(scrollView)
@@ -91,7 +89,6 @@ final class HomeView: BaseView {
         contentView.addSubview(productsCollectionView)
         scrollView.addSubview(contentView)
     }
-    
     override func addConstraints() {
         scrollView.snp.makeConstraints { make in
             make.top.trailing.leading.bottom.equalTo(safeAreaLayoutGuide)
@@ -132,12 +129,10 @@ final class HomeView: BaseView {
             make.height.equalTo(150)
         }
     }
-    
     func setupCash(cash: Cash) {
         cashComponent.setup(cash: cash)
     }
 }
-
 // MARK: - CashTitleBannerDelegate
 extension HomeView: CashTitleBannerDelegate {
     func didTapBanner(cash: Cash) {

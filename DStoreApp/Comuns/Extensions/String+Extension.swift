@@ -22,3 +22,18 @@ extension String {
         withAttributes(.primaryGrayBoldAttributes)
     }
 }
+
+// MARK: - Localizable
+protocol Localizable {
+    var localized: String { get }
+}
+
+extension String: Localizable {
+    
+    static let empty = ""
+    
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+}
+

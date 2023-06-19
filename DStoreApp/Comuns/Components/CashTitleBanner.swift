@@ -20,7 +20,6 @@ class CashTitleBanner: BaseView {
     lazy var titleLabel: UILabel = {
         return UILabel()
     }()
-    
     lazy var bannerImageView: UIImageView = {
         let image = UIImageView()
         image.isUserInteractionEnabled = true
@@ -30,13 +29,11 @@ class CashTitleBanner: BaseView {
         image.clipsToBounds = true
         return image
     }()
-    
     // MARK: - Inits
     convenience init(delegate: CashTitleBannerDelegate) {
         self.init()
         self.delegate = delegate
     }
-    
     override func addViews() {
         self.addSubview(titleLabel)
         self.addSubview(bannerImageView)

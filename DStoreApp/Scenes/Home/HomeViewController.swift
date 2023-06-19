@@ -25,7 +25,7 @@ final class HomeViewController: UIViewController, HasCustomView {
         setupObservables()
         viewModel.loadData()
     }
-    
+    // MARK: - Setups
     private func setup() {
         title = ""
     }
@@ -40,7 +40,6 @@ final class HomeViewController: UIViewController, HasCustomView {
             self.reloadCollections()
         }
     }
-    
     private func reloadCollections() {
         if let cash = viewModel.stores?.cash {
             self.customView.setupCash(cash: cash)
@@ -49,9 +48,8 @@ final class HomeViewController: UIViewController, HasCustomView {
         self.customView.productsCollectionView.reloadData()
        
     }
-    
+    // MARK: - Delegate
     private func setupDelegate() {
-        // TODO: setup delegates
         customView.spotlightCollectionView.delegate = self
         customView.spotlightCollectionView.dataSource = self
         customView.productsCollectionView.delegate = self
@@ -68,7 +66,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return viewModel.stores?.products?.count ?? 0
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == customView.spotlightCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlightCollectionViewCell.reuseIdentifier, for: indexPath) as! SpotlightCollectionViewCell
@@ -80,7 +77,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == customView.spotlightCollectionView {
             DetailItemViewController.show(in: self, name: viewModel.stores?.spotlight?[indexPath.row].name ?? "", info: viewModel.stores?.spotlight?[indexPath.row].info ?? "")
