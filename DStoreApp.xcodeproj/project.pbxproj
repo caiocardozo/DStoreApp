@@ -17,6 +17,8 @@
 		4C2F04562A3F9A870006410E /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04552A3F9A870006410E /* NSAttributedString+Extension.swift */; };
 		4C2F04582A3F9C980006410E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2F04572A3F9C980006410E /* Colors.xcassets */; };
 		4C2F045A2A3F9CE20006410E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04592A3F9CE20006410E /* UIColor+Extension.swift */; };
+		4C2F04702A3FEE460006410E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F046F2A3FEE460006410E /* AlertViewController.swift */; };
+		4C2F04722A3FEE4E0006410E /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F04712A3FEE4E0006410E /* AlertView.swift */; };
 		4CADA18D2A38FC5400ADBD1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */; };
 		4CADA1962A38FC5700ADBD1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CADA1952A38FC5700ADBD1A /* Assets.xcassets */; };
 		4CADA1992A38FC5700ADBD1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CADA1972A38FC5700ADBD1A /* LaunchScreen.storyboard */; };
@@ -74,6 +76,8 @@
 		4C2F04552A3F9A870006410E /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		4C2F04572A3F9C980006410E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4C2F04592A3F9CE20006410E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4C2F046F2A3FEE460006410E /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		4C2F04712A3FEE4E0006410E /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		4CADA1892A38FC5400ADBD1A /* DStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CADA18C2A38FC5400ADBD1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CADA1952A38FC5700ADBD1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +183,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		4C2F046E2A3FEE380006410E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				4C2F046F2A3FEE460006410E /* AlertViewController.swift */,
+				4C2F04712A3FEE4E0006410E /* AlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		4CADA1802A38FC5400ADBD1A = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +247,7 @@
 		4CADA1D52A39463200ADBD1A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4C2F046E2A3FEE380006410E /* Alert */,
 				4C2F04452A3C09E80006410E /* DetailsItem */,
 				4CADA1D62A39467400ADBD1A /* Home */,
 			);
@@ -623,6 +637,7 @@
 				4CF1B1262A3A531800456889 /* NetworkErrors.swift in Sources */,
 				4CADA1E52A394ACD00ADBD1A /* HasCustomView.swift in Sources */,
 				4CF1B1292A3AA21900456889 /* ApiConstants.swift in Sources */,
+				4C2F04722A3FEE4E0006410E /* AlertView.swift in Sources */,
 				4CF1B1142A3A415600456889 /* Store.swift in Sources */,
 				4C2F04472A3C09FE0006410E /* DetailItemView.swift in Sources */,
 				4C2F045A2A3F9CE20006410E /* UIColor+Extension.swift in Sources */,
@@ -634,6 +649,7 @@
 				4CF1B1322A3B461B00456889 /* UIImageView+Extension.swift in Sources */,
 				4CF1B12C2A3AAE7A00456889 /* SpotlightCollectionViewCell.swift in Sources */,
 				4CF1B1162A3A46DD00456889 /* Product.swift in Sources */,
+				4C2F04702A3FEE460006410E /* AlertViewController.swift in Sources */,
 				4CF1B12E2A3AAE8D00456889 /* ProductCollectionViewCell.swift in Sources */,
 				4CADA1F62A39505900ADBD1A /* HomeViewController.swift in Sources */,
 				4CF1B1232A3A524800456889 /* NetworkManager.swift in Sources */,

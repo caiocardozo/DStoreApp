@@ -73,6 +73,7 @@ final class DetailItemView: BaseView {
     }
 }
 
+// MARK: - UITextViewDelegate
 extension DetailItemView: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
             delegate?.didTapUrl(url: URL)

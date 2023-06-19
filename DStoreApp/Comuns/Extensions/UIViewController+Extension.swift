@@ -75,3 +75,13 @@ extension UIViewController {
     }
 }
 
+// MARK: - Alerts
+extension UIViewController {
+    func showErrorAlert(message: String) {
+        self.showAlert(title: "Atenção", message: message)
+    }
+    
+    func showAlert(title: String, message: String, okBlock:(() -> Void)?=nil, cancelBlock: (() -> Void)?=nil) {
+        AlertViewController.show(in: self, title: title, message: message, callback: okBlock)
+    }
+}

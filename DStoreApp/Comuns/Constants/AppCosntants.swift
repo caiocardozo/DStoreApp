@@ -10,3 +10,8 @@ import Foundation
 enum AppConstantsGeneral {
     static let placeholderNoPhoto = "icPlaceHolderNoPhoto"
 }
+
+enum APPConstantsDimensions {    
+    static let lowColorModal = 0.02
+    static let lowAlphaColorModal = 0.3
+}

@@ -34,8 +34,7 @@ final class HomeViewController: UIViewController, HasCustomView {
             self?.isLoading(loading: loading)
         }
         viewModel.error = { [weak self] error in
-           // TODO: Messagem de erro
-            debugPrint(error)
+            self?.showErrorAlert(message: error)
         }
         viewModel.reloadCollections = {
             self.reloadCollections()
@@ -104,11 +103,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
                 return CGSize(width: UIScreen.main.bounds.width - 16, height: 320)
             }
         } else {
-            if let spotlight = viewModel.stores?.products {
-                    return CGSize(width: 150, height: 130)
-            } else {
-                return CGSize(width: UIScreen.main.bounds.width - 16, height: 230)
-            }
+            return CGSize(width: 150, height: 130)
         }
     }
 }

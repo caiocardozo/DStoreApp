@@ -11,6 +11,7 @@ import SnapKit
 protocol HomeViewDelegate: AnyObject {
     func didTapCashBanner(cash: Cash)
 }
+
 final class HomeView: BaseView {
     
     weak var delegate: HomeViewDelegate?
@@ -54,7 +55,6 @@ final class HomeView: BaseView {
         layout.scrollDirection = .horizontal
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(SpotlightCollectionViewCell.self, forCellWithReuseIdentifier: SpotlightCollectionViewCell.reuseIdentifier)
-        collection.showsHorizontalScrollIndicator = false
         return collection
     }()
     lazy var titleProductLabel: UILabel = {

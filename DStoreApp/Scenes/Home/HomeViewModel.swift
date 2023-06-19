@@ -20,7 +20,6 @@ final class HomeViewModel: BaseViewModel {
             self.isLoading?(false)
             self.stores = response
             self.reloadCollections?()
-            debugPrint(response)
         } error: { error in
             self.isLoading?(false)
             self.error?(error)

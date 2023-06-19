@@ -33,14 +33,13 @@ final class DStoreAppTests: XCTestCase {
         }
     }
     
-    
+    // test Init Detail controller
     func testDetailItemViewController(){
-        let viewController = DetailItemViewController(name: "name", imageBanner: "imgUrl", info: "information")
+        let viewController = DetailItemViewController(name: "name", info: "information")
         XCTAssertEqual(viewController.name, "name")
-        XCTAssertEqual(viewController.imageBanner, "imgUrl")
         XCTAssertEqual(viewController.info, "information")
     }
-
+    // test Init Home controller
     func testHomeViewControllerNib(){
         let vc = HomeViewController()
         UIApplication.shared.keyWindow?.rootViewController = vc
