@@ -35,3 +35,8 @@ Os testes unitários foram feitos para testar algumas funções principais do ap
 ## Como executar o projeto 
 - Na raiz executar comando pod install para instalar os pods necessários.
 - Abrir o projeto executando xed .
+
+### TODO
+- Trocar a camada de network para usar swift nativo e assim remover o pod Alamofire
+- Opção de língua no app
+- Efetuar o carregamento das imagens de forma nativa e assim remover o pod SDWebImage
