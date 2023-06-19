@@ -34,6 +34,9 @@ Os testes unitários foram feitos para testar algumas funções principais do ap
 ### Localizable Strings
 Foi inserido o localizable de strings no app, não para ter uma lingua no app que não é o requisito no momento, mas afim de centralizar as strings.
 
+### SwiftLint
+Gosto muito de usar Swift lint nos projetos que trabalho, mas nao foi possivel inserir neste desafio, pois isso comprometeria o prazo de entrega.
+
 ## Como executar o projeto 
 - Na raiz executar comando pod install para instalar os pods necessários.
 - Abrir o projeto executando xed .
