@@ -12,11 +12,10 @@ DStore app é um app de loja(Store) que recebe uma lista de spotlights, produtos
 - [x] Guideline Human Interface
 - [x] Alamofire
 - [x] Teste unitário
-- [ ] Targets
-- [ ] Localizable Strings
+- [x] Localizable Strings
 
 ### Arquitetura MVVM
-Foi utilizada a arquitetura MVVM por entendeer que é uma arquitetura de facil entendimento e rápido desenvolvimento, além de proposcionar uma boa estuturação do código.
+Foi utilizada a arquitetura MVVM por entender que é uma arquitetura de facil entendimento, rápido desenvolvimento, além de proporcionar uma boa estuturação do código e que atende o desafio imposto. 
 
 ### ViewCode
 Projeto inteiramente feito em ViewCode
@@ -32,11 +31,15 @@ Os testes unitários foram feitos para testar algumas funções principais do ap
 - Decodificar os objetos de backend
 - Instancias as principais controllers Home e Detail
 
+### Localizable Strings
+Foi inserido o localizable de strings no app, não para ter uma lingua no app que não é o requisito no momento, mas afim de centralizar as strings.
+
 ## Como executar o projeto 
 - Na raiz executar comando pod install para instalar os pods necessários.
 - Abrir o projeto executando xed .
 
 ### TODO
+- Implmentar o uso do SwiftLint no projeto, afim de padronizar e melhorar a escrita de código. 
 - Trocar a camada de network para usar swift nativo e assim remover o pod Alamofire
-- Opção de língua no app
 - Efetuar o carregamento das imagens de forma nativa e assim remover o pod SDWebImage
+- Implementar o uso de targets no app.
